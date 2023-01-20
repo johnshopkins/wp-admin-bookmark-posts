@@ -1,0 +1,32 @@
+{
+  "name": "wp-admin-bookmark-posts",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack build",
+    "watch": "webpack watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.19.4",
+    "babel-loader": "^9.1.0",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "css-loader": "^6.7.2",
+    "js-utils": "git+ssh://git@github.com/johnshopkins/js-utils.git",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "main": "dist/main.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "add-module-exports",
+      "@babel/plugin-proposal-class-properties"
+    ]
+  }
+}

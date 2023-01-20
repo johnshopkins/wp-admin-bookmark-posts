@@ -1,0 +1,45 @@
+$blue: #2271b1;
+$hover_blue: #135e96;
+
+@mixin showIcon($which) {
+  @each $icon in add, add-fill, added, remove {
+    @if $icon == $which {
+      .icon-#{$icon} { display: block; }
+    } @else {
+      .icon-#{$icon} { display: none; }
+    }
+  }
+}
+
+#bookmarked { width: 100px; }
+
+a.bookmark-post {
+  display: block;
+  height: 24px;
+  width: 24px;
+
+  svg { fill: $blue; }
+  @include showIcon(add);
+
+  &:hover {
+    svg { fill: $hover_blue; }
+    @include showIcon(add-fill);
+  }
+
+  &.just-bookmarked {
+    @include showIcon(added);
+
+    &:hover {
+      @include showIcon(remove);
+    }
+  }
+
+  &.bookmarked {
+    @include showIcon(added);
+
+    &:hover {
+      @include showIcon(remove);
+    }
+
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "johnshopkins/wp-admin-bookmark-post",
+  "description": "Enable users to bookmark posts they edit frequently",
+  "homepage": "https://github.com/johnshopkins/wp-admin-bookmark-post",
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "type": "wordpress-plugin",
+  "autoload": {
+    "psr-4": {
+      "AdminBookmarkPost\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jen Wachter",
+      "email": "jwachter@jhu.edu"
+    }
+  ],
+  "require": {
+    "composer/installers": "~1.0",
+    "php": ">=8.1"
+  }
+}
