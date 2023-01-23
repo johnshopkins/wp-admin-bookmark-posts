@@ -54,7 +54,7 @@ trait UserMetaTrait
   {
     $meta = get_user_meta(get_current_user_id(), 'bookmarked', true);
 
-    if ($meta === '') {
+    if (!$meta) {
       // meta did not exist
       $meta = [];
     }
