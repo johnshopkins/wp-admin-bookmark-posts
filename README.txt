@@ -10,5 +10,11 @@ Enable users to bookmark posts they edit frequently.
 
 == Changelog ==
 
+= 1.0.2 =
+* Changed methodology that decides which post types can be bookmarked (custom post types, page, post)
+
+= 1.0.1 =
+* Bugfix
+
 = 1.0.0 =
 * First release

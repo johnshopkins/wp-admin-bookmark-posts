@@ -1,6 +1,6 @@
 {
   "name": "wp-admin-bookmark-posts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "build": "webpack build",
     "watch": "webpack watch"
