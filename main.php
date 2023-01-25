@@ -11,9 +11,11 @@ require 'vendor/autoload.php';
 
 add_action('admin_init', function () {
 
-  // post types that are bookmarkable
-  $postTypes = get_post_types(['public' => true]);
-  unset($postTypes['attachment']);
+  // post types that are bookmarkable (custom post types, page, pa
+  $postTypes = get_post_types(['show_ui' => true, '_builtin' => false]);
+  $postTypes['page'] = 'page';
+  $postTypes['post'] = 'post';
+
   $postTypes = apply_filters('admin_bookmark_post_types', $postTypes);
 
   // alter post tables of bookmarkable post types
