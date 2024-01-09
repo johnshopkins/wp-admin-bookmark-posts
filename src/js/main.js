@@ -1,4 +1,3 @@
-const classUtils = require('js-utils').class;
 import '../css/bookmark-post.scss';
 
 const bookmarkIcons = document.querySelectorAll('.column-bookmarked .bookmark-post');
@@ -15,14 +14,15 @@ bookmarkIcons.forEach(icon => icon.addEventListener('click', e => {
     .then((response) => response.json())
     .then((data) => {
       if (data.success) {
-        if (classUtils.hasClass(target, 'bookmarked')) {
+
+        if (target.classList.contains('bookmarked')) {
           // bookmark removed
           target.setAttribute('title', 'Add bookmark');
-          classUtils.removeClass(target, 'bookmarked');
+          target.classList.remove('bookmarked');
         } else {
           // bookmark added
           target.setAttribute('title', 'Remove bookmark');
-          classUtils.addClass(target, 'bookmarked');
+          target.classList.add('bookmarked');
         }
       }
     });
